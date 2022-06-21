@@ -9,6 +9,7 @@ app.use(cors());
 
 app.get("/todos", (req, res) => {
   const todos = Database.getAll();
+   console.log(todos)
   res.status(200).send(todos);
 });
 
@@ -16,6 +17,7 @@ app.post("/todos", (req, res) => {
   const value = req.body.value;
 
   Database.add(value);
+  // console.log(req.body.id)
  res.status(201).send({ message: "Successfully created todo" });
 });
 
