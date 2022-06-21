@@ -16,8 +16,7 @@ app.post("/todos", (req, res) => {
   const value = req.body.value;
 
   Database.add(value);
-  console.log(value)
-  res.status(201).send({ message: "Successfully created todo" });
+ res.status(201).send({ message: "Successfully created todo" });
 });
 
 app.delete("/todo/:id", (req, res) => {
