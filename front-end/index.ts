@@ -54,6 +54,7 @@ addButton.onclick =  () =>{
     const todos = await getAllTodos();
     
     
+     
     
     todos.forEach((todo) => {
       const listItem = document.createElement("li");
